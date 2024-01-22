@@ -1,4 +1,4 @@
-#*OSeMobility*: The open-source mobility model#
+***OSeMobility*: The open-source mobility model**
 
 Modular transport systems model for integration with CCG Data-to-deal (D2D) workflow.
 
