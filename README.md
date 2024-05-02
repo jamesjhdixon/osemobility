@@ -15,12 +15,6 @@ Contribution guidelines will be published in due course.
 3. Vehicle Stock Module (VSM)
 4. Energy and Emissions Module (EEM)
 
-(c) 2024 James Dixon 
+(c) 2024 [James Dixon](https://www.strath.ac.uk/staff/dixonjamesmr/) 
 
-Dept. of Civil & Environmental Engineering
-
-University of Strathclyde
-
-Glasgow, UK
-
-james.dixon@strath.ac.uk
+Dept. of Civil & Environmental Engineering, University of Strathclyde, Glasgow G1 1XJ, UK
