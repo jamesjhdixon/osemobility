@@ -16,7 +16,11 @@ Contribution guidelines will be published in due course.
 4. Energy and Emissions Module (EEM)
 
 (c) 2024 James Dixon 
+
 Dept. of Civil & Environmental Engineering
+
 University of Strathclyde
+
 Glasgow, UK
+
 james.dixon@strath.ac.uk
