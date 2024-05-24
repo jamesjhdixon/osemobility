@@ -17,6 +17,8 @@ Contribution guidelines will be published in due course.
 
 ---
 
-(c) 2024 [James Dixon](https://www.strath.ac.uk/staff/dixonjamesmr/) 
+MIT License. 
+
+Contact: [James Dixon](mailto:james.dixon@strath.ac.uk)
 
 Dept. of Civil & Environmental Engineering, University of Strathclyde, Glasgow G1 1XJ, UK
