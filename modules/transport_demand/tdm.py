@@ -59,7 +59,7 @@ if country.lower() in [l.lower() for l in tdsk_data['Country name'].unique().tol
     # Add labels and title
     plt.xlabel('Year')
     plt.ylabel('Passenger-km')
-    plt.title(f'Passenger-km by mode of transport ({base_year}-{end_year})')
+    plt.title(f'{country}: Passenger-km by mode of transport ({base_year}-{end_year})')
     plt.legend()
 
     # Show the plot
