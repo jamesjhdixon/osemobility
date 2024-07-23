@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 # %%
@@ -80,6 +81,8 @@ def get_base_pkm_per_mode(df, country, year):
     else:
         # Use total pkm and predefined mode shares if mode split data unavailable or NaN
         total_pkm = df[(df['Data code'] == 'ROAD_PA_MOV') & ~np.isnan(df[year])].iloc[0][year]
+
+        # TODO: Add better data here!!
         mode_share_road_pkm = {'BUS': 0.55, 'CAR': 0.2, 'MOTO': 0.1}  # arbitrary(?) data
         base_pkm_per_mode = {mode: total_pkm * share for mode, share in mode_share_road_pkm.items()}
 
@@ -123,9 +126,9 @@ def calculate_travel_demand(df, country, base_year, projection_data, elasticity_
         # Calculate pkm for each mode based on base pkm, GDP, population, and elasticities
         for mode, base_pkm in base_pkm_per_mode.items():
             pkm_per_mode_per_year[year][mode] = base_pkm * (
-                        gdp_current / projection_data['GDP'][base_year]) ** gdp_elasticity * (
-                                                            population_current / projection_data['Population'][
-                                                        base_year]) ** population_elasticity
+                    gdp_current / projection_data['GDP'][base_year]) ** gdp_elasticity * (
+                                                        population_current / projection_data['Population'][
+                                                    base_year]) ** population_elasticity
 
     return pkm_per_mode_per_year
 
@@ -136,3 +139,36 @@ def example_elasticity_function(year):
     # Implement your logic to calculate dynamic elasticities based on year
     # This is a placeholder example, replace with your actual function
     return 1.2, 1.1  # Placeholder elasticity values
+
+
+# %%
+# Plot pkm_by_mode
+def create_pkm_plot(base_year, end_year, pkm_by_mode, country, modes=None):
+
+    if modes is None:
+        modes = ['CAR', 'MOTO', 'BUS']
+
+    years = []
+    mode_values = {mode: [] for mode in modes}
+
+    for year in range(base_year, end_year + 1):
+        if year in pkm_by_mode:
+            years.append(year)
+            for mode in modes:
+                mode_values[mode].append(pkm_by_mode[year].get(mode, 0))
+
+    # Create figure and axes explicitly
+    sns.set_style('whitegrid')
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    for mode, values in mode_values.items():
+        ax.plot(years, values, marker='o', linestyle='-', label=mode)  # Plot on the axes object
+
+    ax.set_xlabel('Year')
+    ax.set_ylabel('Passenger-km')
+    ax.set_title(f'{country}: Passenger-km by mode of transport ({base_year}-{end_year})')
+    ax.legend()
+    ax.grid(axis='y', linestyle='--')
+
+    # Return the figure
+    return fig
