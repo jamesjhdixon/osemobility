@@ -10,7 +10,7 @@ Africa,Zambia,ZM,ZMB,894,Freight activity,Road,All,All,All,ROAD_GO_NAT,milion to
 Africa,Zambia,ZM,ZMB,894,Freight activity,Rail,All,All,All,RAIL_GO_TOTAL,milion ton-km,UN DESA (2020). Indicator 9.1.2: Freight volume by mode of transport (tonne kilometres). Available at: https://unstats-undesa.opendata.arcgis.com/datasets/4a5d7189e27148c48f045729ef9e40c8_0/about,TSDK,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1053.15881,,,,
 Africa,Zambia,ZM,ZMB,894,Freight activity,Aviation,All,All,All,AVIA_GONC,milion ton-km,UN DESA (2020). Indicator 9.1.2: Freight volume by mode of transport (tonne kilometres). Available at: https://unstats-undesa.opendata.arcgis.com/datasets/4a5d7189e27148c48f045729ef9e40c8_0/about,TSDK,,,,,,,,,,,,,,,,,,,,,,,,,,,,81.55761,75.077398,,,,
 Africa,Zambia,ZM,ZMB,894,Freight activity,Inland waterways,All,All,All,IWW_GO_NAT,milion ton-km,UN DESA (2020). Indicator 9.1.2: Freight volume by mode of transport (tonne kilometres). Available at: https://unstats-undesa.opendata.arcgis.com/datasets/4a5d7189e27148c48f045729ef9e40c8_0/about,TSDK,,,,,,,,,,,,,,,,,,,,,,,,,,,,,13.315112,,,,
-Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Light Duty Vehicle,All,All,ROAD_STOCK_NEW_LDV,n,Processed data from Malindi Msoni - uploaded to Zambia TED,Taken from Registration Data (Malindi),,,,,,,,,,,,,,,,,,,,,,,,,,38960,19787,25542,26827,23640,18893,27797,40341
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Light Duty Vehicle (Passenger),All,All,ROAD_STOCK_NEW_LDV,n,Processed data from Malindi Msoni - uploaded to Zambia TED,Taken from Registration Data (Malindi),,,,,,,,,,,,,,,,,,,,,,,,,,38960,19787,25542,26827,23640,18893,27797,40341
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Car,All,All,ROAD_STOCK_NEW_CAR,n,Processed data from Malindi Msoni - uploaded to Zambia TED,Taken from Registration Data (Malindi),,,,,,,,,,,,,,,,,,,,,,,,,,35192,17852,22913,24044,21256,17203,25713,37219
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Minibus,All,All,ROAD_STOCK_NEW_MINIBUS,n,Processed data from Malindi Msoni - uploaded to Zambia TED,Entered as 'Light Duty Vehicle',,,,,,,,,,,,,,,,,,,,,,,,,,3768,1935,2629,2783,2384,1690,2084,3122
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Van,All,All,ROAD_STOCK_NEW_VAN,n,Processed data from Malindi Msoni - uploaded to Zambia TED,Entered as 'Light Load Vehicle',,,,,,,,,,,,,,,,,,,,,,,,,,5697,4358,4695,4825,3422,2612,3503,4116
@@ -20,5 +20,13 @@ Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Motorcycle,All,All,ROAD_STOC
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Agricultural and forestry tractors,All,All,ROAD_STOCK_NEW_AGRI,n,Processed data from Malindi Msoni - uploaded to Zambia TED,"Combined ""Agriculture Tractor"" and ""Agricultural Trailer""",,,,,,,,,,,,,,,,,,,,,,,,,,7,4,6,1,0,0,0,1
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Trailer,All,All,ROAD_STOCK_NEW_TRAILER,n,Processed data from Malindi Msoni - uploaded to Zambia TED,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,1585,1066,2074,2228,1651,2479,3210
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_NEW_ALL,n,Zambia TED - https://zenodo.org/records/10495698,,,,,,,,,,,,,,,,,,,,,,,,,,,56278,32699,39541,45022,39759,31544,45090,63187
-Africa,Zambia,ZM,ZMB,894,Vehicle stock,Road,All,All,All,ROAD_STOCK_CUM_ALL,n,Zambia TED - https://zenodo.org/records/10495698,,,,,,,,,,,,,,,,,,,,,307241,337513,381948,528584,534523,605043,661617,686103,737671,782136,822882,899186,944276,1007463
+,,,,,,,,,,ROAD_STOCK_CUM_LDV,n,TDSK (see pdf - https://zenodo.org/records/10410338),,,,,,,,,,,,,,,,,,,,,,,,61005,34097,51544,38956,19784,26867,26457,24410,,,
+,,,,,,,,,,ROAD_STOCK_CUM_CAR,n,TDSK (see pdf - https://zenodo.org/records/10410338),"Assumed to be the same proportion of ""LDV"" as for new vehicles",,,,,,,,,,,,,,,,,,,,,,,55104.9271,30799.323,46558.94374,35188.38686,17849.29337,24101.61972,23712.38335,21948.34856,,,
+,,,,,,,,,,ROAD_STOCK_CUM_MINIBUS,n,TDSK (see pdf - https://zenodo.org/records/10410338),"Assumed to be the same proportion of ""LDV"" as for new vehicles",,,,,,,,,,,,,,,,,,,,,,,5900.072895,3297.677002,4985.056263,3767.613142,1934.706626,2765.380276,2744.616655,2461.651438,,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Africa,Zambia,ZM,ZMB,894,Vehicle stock,Road,All,All,All,ROAD_STOCK_CUM_ALL,n,Zambia TED - https://zenodo.org/records/10495698,,,,,,,,,,,,,,,,,,,,,307241,337513,381948,528584,534523,605043,661617,686103,737671,782136,822882,899186,944276,1007463
