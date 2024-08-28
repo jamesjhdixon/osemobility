@@ -1,6 +1,8 @@
 # Vehicle stock code
 # Objective: to calculate the number of required vehicles in year=y given demand for vehicles and scrap
 
+# SEE VSM-NOTEBOOK FOR DEVELOPMENT!
+
 # %%
 # Temporarily store pkm_by_mode data here to be used
 def return_input_data():
@@ -163,20 +165,3 @@ def calculate_vehicle_demand(pkm_by_mode, occ_by_mode, kilometrage_by_mode):
     return vehicle_demand
 
 
-# %%
-# Define function for retrieving base-year vehicle stock
-def get_base_year_stock(df, country, year):
-    """Retrieves vehicle stock by mode for the base year (input data).
-
-    Args:
-        df: Country data. Could be TSDK, or more detailed country-specific data.
-        country: String. E.g. "Zambia".
-        year: Integer. E.g. 2015.
-
-    Returns:
-        Dict with year as key and nested dict of mode:vehicles as value.
-    """
-
-    # TODO: retrieve data from stock
-
-    return base_year_stock()
