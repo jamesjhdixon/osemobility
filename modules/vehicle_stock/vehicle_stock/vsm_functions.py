@@ -137,19 +137,19 @@ def return_input_data():
 
 # return age data - EXISTING STOCK (based on GIZ INFRAS 2019 Kenya data)
 def return_age_data_cumulative_stock():
-    age_data = pd.read_excel('./../../../data/vehicle_stock/age_distribution.xlsx')
+    age_data = pd.read_excel('./../data/vehicle_stock/age_distribution.xlsx')
     return age_data
 
 
 # return age data - NEW STOCK (based on Zambian vehicle registration data (Malindi))
 def return_age_data_new_stock():
-    new_age_data = pd.read_excel('./../../../data/vehicle_stock/age_distribution_new_vehicles.xlsx')
+    new_age_data = pd.read_excel('./../data/vehicle_stock/age_distribution_new_vehicles.xlsx')
     return new_age_data
 
 
 # return scrappage data
 def return_scrappage_data():
-    scrappage_data = pd.read_excel('./../../../data/vehicle_stock/scrappage_rates.xlsx')
+    scrappage_data = pd.read_excel('./../data/vehicle_stock/scrappage_rates.xlsx')
     return scrappage_data
 
 
@@ -201,7 +201,7 @@ def get_base_year_new_stock(df, base_year, age_data=return_age_data_new_stock(),
 # return country data
 def return_country_data(country, start_year=1990, end_year=2022):
     try:
-        df = pd.read_excel(f"./../../../data/country_data/{country}/{country}.xlsx")
+        df = pd.read_excel(f"./../data/country_data/{country}/{country}.xlsx")
         country_data = df[['Country name', 'Variable', 'Type', 'Sub-type', 'Fuel', 'Destination', 'Data code', 'Unit'] +
                           [y for y in range(start_year, end_year)]]
         return country_data

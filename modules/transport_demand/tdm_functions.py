@@ -19,7 +19,7 @@ def return_tdsk(start_year=1990, end_year=2021):
 # import data - return World Economic Outlook database (IMF)
 def return_weo(start_year=1990, end_year=2030):
     try:
-        df = pd.read_excel(f"./../../data/WEOApr2024all.xlsx")
+        df = pd.read_excel(f"./../data/WEOApr2024all.xlsx")
         country_data = df[['Country', 'WEO Subject Code', 'Subject Descriptor', 'Units'] + [y for y in range(
             start_year, end_year)]]
         return country_data
