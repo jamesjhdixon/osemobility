@@ -6,14 +6,23 @@ import seaborn as sns
 
 # %%
 # import data - return TDSK
-def return_tdsk(start_year=1990, end_year=2021):
-    try:
-        df = pd.read_excel("https://zenodo.org/records/10406893/files/TSDK_ALL.xlsx?download=1", sheet_name="Data")
-        country_data = df[['Country name', 'Variable', 'Data code', 'Unit'] + [y for y in range(
-            start_year, end_year)]]
-        return country_data
-    except Exception as e:
-        return f"an error occurred (probably the source data at URL has changed): {e}"
+def return_tdsk(start_year=1990, end_year=2021, download=False):
+    if download:
+        try:
+            df = pd.read_excel("https://zenodo.org/records/10406893/files/TSDK_ALL.xlsx?download=1", sheet_name="Data")
+            country_data = df[['Country name', 'Variable', 'Data code', 'Unit'] + [y for y in range(
+                start_year, end_year)]]
+            return country_data
+        except Exception as e:
+            return f"an error occurred (probably the source data at URL has changed): {e}"
+    else:
+        try:
+            df = pd.read_excel("./../data/TSDK_ALL.xlsx", sheet_name="Data")
+            country_data = df[['Country name', 'Variable', 'Data code', 'Unit'] + [y for y in range(
+                start_year, end_year)]]
+            return country_data
+        except Exception as e:
+            return f"an error occurred (problem reading local file!): {e}"
 
 
 # import data - return World Economic Outlook database (IMF)

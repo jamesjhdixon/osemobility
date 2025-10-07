@@ -137,19 +137,19 @@ def return_input_data():
 
 # return age data - EXISTING STOCK (based on GIZ INFRAS 2019 Kenya data)
 def return_age_data_cumulative_stock():
-    age_data = pd.read_excel('./../data/vehicle_stock/age_distribution.xlsx')
+    age_data = pd.read_csv('./../data/vehicle_stock/age_distribution.csv')
     return age_data
 
 
 # return age data - NEW STOCK (based on Zambian vehicle registration data (Malindi))
 def return_age_data_new_stock():
-    new_age_data = pd.read_excel('./../data/vehicle_stock/age_distribution_new_vehicles.xlsx')
+    new_age_data = pd.read_csv('./../data/vehicle_stock/age_distribution_new_vehicles.csv')
     return new_age_data
 
 
 # return scrappage data
 def return_scrappage_data():
-    scrappage_data = pd.read_excel('./../data/vehicle_stock/scrappage_rates.xlsx')
+    scrappage_data = pd.read_csv('./../data/vehicle_stock/scrappage_rates.csv')
     return scrappage_data
 
 
@@ -168,9 +168,9 @@ def get_base_year_stock(df, base_year, age_data=return_age_data_cumulative_stock
     # Retrieve data from stock
     base_year_stock = {base_year: {vehicle: {} for vehicle in vehicles}}
     for vehicle in vehicles:
-        for age in age_data.Age.unique().tolist():
-            base_year_stock[base_year][vehicle][age] = np.round(df[df['Data code'] == f'ROAD_STOCK_CUM_{vehicle}'][base_year].item() * age_data[age_data['Age'] == age][[c for c in age_data.columns.tolist() if 'CAR' in c][0]].tolist()[0], 0) # TODO: this just takes the first matching age data. Improve with a better tech lookup.
-
+        for age in age_data.Age.dropna().unique().tolist():
+            base_year_stock[base_year][vehicle][age] = np.round(df[df['Data code'] == f'ROAD_STOCK_CUM_{vehicle}']
+                                                                [str(base_year)].item() * age_data[age_data['Age'] == age][[c for c in age_data.columns.tolist() if 'CAR' in c][0]].tolist()[0], 0) # TODO: this just takes the first matching age data. Improve with a better tech lookup.
     return base_year_stock
 
 
@@ -192,7 +192,7 @@ def get_base_year_new_stock(df, base_year, age_data=return_age_data_new_stock(),
     for vehicle in vehicles:
         for age in age_data['age'].unique().tolist():
             base_year_new_stock[base_year][vehicle][age] = np.round(
-                df[df['Data code'] == f'ROAD_STOCK_NEW_{vehicle}'][base_year].item() * age_data[age_data['age'] == age][
+                df[df['Data code'] == f'ROAD_STOCK_NEW_{vehicle}'][str(base_year)].item() * age_data[age_data['age'] == age][
                     f'{vehicle}_{base_year}'].item(), 0)
 
     return base_year_new_stock
@@ -201,9 +201,9 @@ def get_base_year_new_stock(df, base_year, age_data=return_age_data_new_stock(),
 # return country data
 def return_country_data(country, start_year=1990, end_year=2022):
     try:
-        df = pd.read_excel(f"./../data/country_data/{country}/{country}.xlsx")
+        df = pd.read_csv(f"./../data/country_data/{country}/{country}.csv")
         country_data = df[['Country name', 'Variable', 'Type', 'Sub-type', 'Fuel', 'Destination', 'Data code', 'Unit'] +
-                          [y for y in range(start_year, end_year)]]
+                          [str(y) for y in range(start_year, end_year)]]
         return country_data
     except Exception as e:
         return f"an error occurred: {e}"
@@ -301,6 +301,8 @@ def calculate_vehicle_stocks(desired_stock, base_year_stock, base_year_new_stock
                 annual_stock[year][vehicle][age] = annual_stock[year][vehicle][age - 1]
 
             annual_stock[year][vehicle][0] = 0
+
+    print(f'Calculated annual vehicle stocks for set {vehicles} over years ({base_year, end_year})')
 
     return annual_stock
 

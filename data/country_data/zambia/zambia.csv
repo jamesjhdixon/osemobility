@@ -20,13 +20,13 @@ Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Motorcycle,All,All,ROAD_STOC
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Agricultural and forestry tractors,All,All,ROAD_STOCK_NEW_AGRI,n,Processed data from Malindi Msoni - uploaded to Zambia TED,"Combined ""Agriculture Tractor"" and ""Agricultural Trailer""",,,,,,,,,,,,,,,,,,,,,,,,,,7,4,6,1,0,0,0,1
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,Trailer,All,All,ROAD_STOCK_NEW_TRAILER,n,Processed data from Malindi Msoni - uploaded to Zambia TED,,,,,,,,,,,,,,,,,,,,,,,,,,,2243,1585,1066,2074,2228,1651,2479,3210
 Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_NEW_ALL,n,Zambia TED - https://zenodo.org/records/10495698,,,,,,,,,,,,,,,,,,,,,,,,,,,56278,32699,39541,45022,39759,31544,45090,63187
-,,,,,,,,,,ROAD_STOCK_CUM_LDV,n,TDSK (see pdf - https://zenodo.org/records/10410338),,,,,,,,,,,,,,,,,,,,,,,,61005,34097,51544,38956,19784,26867,26457,24410,,,
-,,,,,,,,,,ROAD_STOCK_CUM_CAR,n,TDSK (see pdf - https://zenodo.org/records/10410338),"Assumed to be the same proportion of ""LDV"" as for new vehicles",,,,,,,,,,,,,,,,,,,,,,,55104.9271,30799.323,46558.94374,35188.38686,17849.29337,24101.61972,23712.38335,21948.34856,,,
-,,,,,,,,,,ROAD_STOCK_CUM_MINIBUS,n,TDSK (see pdf - https://zenodo.org/records/10410338),"Assumed to be the same proportion of ""LDV"" as for new vehicles",,,,,,,,,,,,,,,,,,,,,,,5900.072895,3297.677002,4985.056263,3767.613142,1934.706626,2765.380276,2744.616655,2461.651438,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_LDV,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,458023,415178,476508,466047,489271,538560,582126,643203
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_CAR,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,413725,374578,427462,417700,439930,490385,538482,593425
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_MINIBUS,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,44297,40601,49046,48347,49341,48175,43643,49778
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_VAN,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,66975,91441,87589,83821,70824,74457,73360,65626
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_TRUCK,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,71008,80866,104417,142262,144857,160060,152521,161084
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_BUS,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,7642,10785,13563,14958,17302,13768,13906,16040
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_MOTO,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,31518,54491,35595,39001,54515,65278,70449,70314
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_AGRI,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,82,84,112,17,0,0,0,16
+Africa,Zambia,ZM,ZMB,894,Vehicle registrations,Road,All,All,All,ROAD_STOCK_CUM_TRAILER,n,Estimation,Proportionally based on share of new vehicles in given year,,,,,,,,,,,,,,,,,,,,,,,,,,26369,33257,19887,36030,46112,47063,51915,51181
 Africa,Zambia,ZM,ZMB,894,Vehicle stock,Road,All,All,All,ROAD_STOCK_CUM_ALL,n,Zambia TED - https://zenodo.org/records/10495698,,,,,,,,,,,,,,,,,,,,,307241,337513,381948,528584,534523,605043,661617,686103,737671,782136,822882,899186,944276,1007463
